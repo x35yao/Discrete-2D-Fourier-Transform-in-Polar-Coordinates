@@ -1,0 +1,339 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6404e273, pid=4344, tid=6424
+#
+# JRE version: 6.0_38-b05
+# Java VM: Java HotSpot(TM) Client VM (20.13-b02 mixed mode windows-x86 )
+# Problematic frame:
+# C  [ig75icd32.dll+0xae273]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x45fd2000):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=6424, stack(0x489b0000,0x48db0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000004
+
+Registers:
+EAX=0x00000000, EBX=0x48dae290, ECX=0x02591778, EDX=0x02659ac0
+ESP=0x48daba08, EBP=0x48dac348, ESI=0x48daba34, EDI=0x486c0080
+EIP=0x6404e273, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x48daba08)
+0x48daba08:   6416ba3a 486c0080 486dcde0 54b5d9c0
+0x48daba18:   00060000 00040680 02659698 54b5fe50
+0x48daba28:   00060000 000559b0 026597b0 54b5d618
+0x48daba38:   00060000 00000000 02659ac0 54b543b8
+0x48daba48:   00060000 00000b7c 02659890 54b54eb0
+0x48daba58:   00060000 00000b7c 02659430 54b53170
+0x48daba68:   00060000 000003d4 02659a88 54b54760
+0x48daba78:   00060000 00000b7c 02659628 54b55258 
+
+Instructions: (pc=0x6404e273)
+0x6404e253:   00 00 00 e8 d5 1f 12 00 03 46 14 5e c3 8b 46 14
+0x6404e263:   03 46 04 5e c3 cc cc cc cc cc cc cc cc 8b 41 10
+0x6404e273:   ff 70 04 e8 45 fc 3c 00 c3 cc cc cc cc 55 8b ec
+0x6404e283:   83 ec 08 56 57 8b 7d 08 89 55 f8 89 4d fc c7 45 
+
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x48dae290 is pointing into the stack for thread: 0x45fd2000
+ECX=0x02591778 is an unknown value
+EDX=0x02659ac0 is an unknown value
+ESP=0x48daba08 is pointing into the stack for thread: 0x45fd2000
+EBP=0x48dac348 is pointing into the stack for thread: 0x45fd2000
+ESI=0x48daba34 is pointing into the stack for thread: 0x45fd2000
+EDI=0x486c0080 is an unknown value
+
+
+Stack: [0x489b0000,0x48db0000],  sp=0x48daba08,  free space=4078k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ig75icd32.dll+0xae273]  RegisterProcTableCallback+0xa1883
+C  [ig75icd32.dll+0x1d6473]  DrvSetLayerPaletteEntries+0x8b0c3
+C  [ig75icd32.dll+0x289e3d]  DrvSetLayerPaletteEntries+0x13ea8d
+C  [ig75icd32.dll+0x289976]  DrvSetLayerPaletteEntries+0x13e5c6
+C  [ig75icd32.dll+0x285d7d]  DrvSetLayerPaletteEntries+0x13a9cd
+C  [ig75icd32.dll+0x1567a2]  DrvSetLayerPaletteEntries+0xb3f2
+C  [jogl.dll+0xfbc6]  Java_com_sun_opengl_impl_GLImpl_glVertex3dv1__Ljava_lang_Object_2I+0x36
+J  com.sun.opengl.impl.GLImpl.glVertex3dv1(Ljava/lang/Object;I)V
+J  com.sun.opengl.impl.GLImpl.glVertex3dv([DI)V
+j  com.maplesoft.mathdoc.view.plot.Plot3DGridView.drawStyle(Ljavax/media/opengl/GL;IZF)V+8
+j  com.maplesoft.mathdoc.view.plot.AbstractPlot3DComponentView.display(Ljavax/media/opengl/GL;FZ)V+1044
+J  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView.drawGLContents(Ljavax/media/opengl/GL;ZLcom/maplesoft/mathdoc/view/plot/PlotMatrixUtilities$Matrix3;)V
+J  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView$GLDrawableContainer.draw(Ljava/awt/Graphics2D;II)V
+V  [jvm.dll+0xfb86b]
+V  [jvm.dll+0x18d531]
+V  [jvm.dll+0xfb8ed]
+V  [jvm.dll+0xbbf54]
+C  [java.dll+0x102f]  Java_java_security_AccessController_doPrivileged__Ljava_security_PrivilegedAction_2Ljava_security_AccessControlContext_2+0x17
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0xfb86b]
+V  [jvm.dll+0x18d531]
+V  [jvm.dll+0xfba11]
+V  [jvm.dll+0xfba6b]
+V  [jvm.dll+0xb5e69]
+V  [jvm.dll+0x119b54]
+V  [jvm.dll+0x14215c]
+C  [msvcr71.dll+0x9565]  endthreadex+0xa0
+C  [KERNEL32.DLL+0x18654]  BaseThreadInitThunk+0x24
+C  [ntdll.dll+0x64a47]  RtlGetAppContainerNamedObjectPath+0x137
+C  [ntdll.dll+0x64a17]  RtlGetAppContainerNamedObjectPath+0x107
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J  com.sun.opengl.impl.GLImpl.glVertex3dv1(Ljava/lang/Object;I)V
+J  com.sun.opengl.impl.GLImpl.glVertex3dv([DI)V
+J  com.maplesoft.util.gl2ps.WmiGL.glVertex3dv([DI)V
+J  com.maplesoft.mathdoc.view.plot.Plot3DGridView$1Adder.add(II)V
+J  com.maplesoft.mathdoc.view.plot.Plot3DGridView.drawFilledMesh(Ljavax/media/opengl/GL;ZI)V
+j  com.maplesoft.mathdoc.view.plot.Plot3DGridView.drawMeshWithOutline(Ljavax/media/opengl/GL;I)Z+27
+j  com.maplesoft.mathdoc.view.plot.Plot3DGridView.drawStyle(Ljavax/media/opengl/GL;IZF)V+8
+j  com.maplesoft.mathdoc.view.plot.AbstractPlot3DComponentView.display(Ljavax/media/opengl/GL;FZ)V+1044
+J  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView.drawGLContents(Ljavax/media/opengl/GL;ZLcom/maplesoft/mathdoc/view/plot/PlotMatrixUtilities$Matrix3;)V
+j  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView.drawGL(Ljavax/media/opengl/GLDrawable;Ljavax/media/opengl/GL;Ljava/awt/geom/Point2D;Ljava/nio/IntBuffer;[I)V+736
+J  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView$GLDrawableContainer.draw(Ljava/awt/Graphics2D;II)V
+J  com.maplesoft.mathdoc.view.plot.Plot3DCanvasView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiArrayCompositeView.drawChildren(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiResizableContainerView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.plot.PlotMainView.drawPlotWithoutRollover(Ljava/awt/Graphics2D;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.plot.PlotMainView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiInlineView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiRowView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiParagraphView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.worksheet.view.WmiTextFieldView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiRowView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.worksheet.view.WmiExecutionGroupView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiRowView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiRowView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.worksheet.view.WmiSectionView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiRowView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiMathDocumentView.draw(Ljava/awt/Graphics;Lcom/maplesoft/mathdoc/view/WmiRenderContext;Ljava/awt/Rectangle;)V
+J  com.maplesoft.mathdoc.view.WmiMathDocumentView.paint(Ljava/awt/Graphics;)V
+J  javax.swing.JComponent.paintToOffscreen(Ljava/awt/Graphics;IIIIII)V
+J  javax.swing.RepaintManager$PaintManager.paintDoubleBuffered(Ljavax/swing/JComponent;Ljava/awt/Image;Ljava/awt/Graphics;IIII)V
+J  javax.swing.RepaintManager$PaintManager.paint(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z
+J  javax.swing.RepaintManager.paint(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V
+J  javax.swing.JComponent._paintImmediately(IIII)V
+J  javax.swing.JComponent.paintImmediately(IIII)V
+J  javax.swing.RepaintManager.paintDirtyRegions(Ljava/util/Map;)V
+J  javax.swing.RepaintManager.paintDirtyRegions()V
+J  javax.swing.RepaintManager.prePaintDirtyRegions()V
+J  javax.swing.RepaintManager$ProcessingRunnable.run()V
+J  java.awt.event.InvocationEvent.dispatch()V
+J  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V
+J  java.awt.EventQueue$2.run()Ljava/lang/Object;
+v  ~StubRoutines::call_stub
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z
+J  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x45d70c00 JavaThread "Timer-10" [_thread_blocked, id=9176, stack(0x56c40000,0x57040000)]
+  0x45d73000 JavaThread "Timer-9" [_thread_blocked, id=2848, stack(0x56840000,0x56c40000)]
+  0x45d72000 JavaThread "Timer-8" [_thread_blocked, id=3796, stack(0x56040000,0x56440000)]
+  0x45d71800 JavaThread "Timer-7" [_thread_blocked, id=8664, stack(0x55440000,0x55840000)]
+  0x45d74400 JavaThread "Kernel Connection" daemon [_thread_blocked, id=9628, stack(0x56440000,0x56840000)]
+  0x45d71400 JavaThread "Timer-6" daemon [_thread_blocked, id=2052, stack(0x55840000,0x55c40000)]
+  0x45d75800 JavaThread "Timer-5" [_thread_blocked, id=10740, stack(0x55c40000,0x56040000)]
+  0x45d72400 JavaThread "GLDrawableContainer purge thread" daemon [_thread_blocked, id=10656, stack(0x54050000,0x54450000)]
+  0x45d72c00 JavaThread "Timer-4" [_thread_blocked, id=5588, stack(0x481c0000,0x485c0000)]
+  0x45b7f800 JavaThread "Timer-3" [_thread_blocked, id=3396, stack(0x46160000,0x46560000)]
+  0x45b7d400 JavaThread "DestroyJavaVM" [_thread_blocked, id=9368, stack(0x04350000,0x04750000)]
+  0x45b7c800 JavaThread "Quick Help popup thread" daemon [_thread_blocked, id=2316, stack(0x4d5d0000,0x4d9d0000)]
+  0x45b80000 JavaThread "Kernel Connection" daemon [_thread_blocked, id=9660, stack(0x4d1d0000,0x4d5d0000)]
+  0x45b7ec00 JavaThread "palette position change updater" daemon [_thread_blocked, id=10132, stack(0x4cdd0000,0x4d1d0000)]
+  0x45b7f400 JavaThread "auto command complete monitor" daemon [_thread_blocked, id=10172, stack(0x4c990000,0x4cd90000)]
+  0x45b7cc00 JavaThread "TimerQueue" daemon [_thread_blocked, id=1260, stack(0x4c550000,0x4c950000)]
+  0x45b7e400 JavaThread "Swing-Shell" daemon [_thread_blocked, id=1048, stack(0x4b1a0000,0x4b5a0000)]
+  0x45b7e000 JavaThread "Timer-2" daemon [_thread_blocked, id=11100, stack(0x4a4e0000,0x4a8e0000)]
+  0x45b7d800 JavaThread "Timer-1" [_thread_blocked, id=7104, stack(0x4a920000,0x4ad20000)]
+  0x45e00800 JavaThread "Timer-0" [_thread_blocked, id=9716, stack(0x49820000,0x49c20000)]
+  0x45fd6000 JavaThread "WMI:Background Task Runner" [_thread_blocked, id=3788, stack(0x48ed0000,0x492d0000)]
+=>0x45fd2000 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=6424, stack(0x489b0000,0x48db0000)]
+  0x45f92000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=8724, stack(0x47380000,0x47780000)]
+  0x45f87400 JavaThread "AWT-Shutdown" [_thread_blocked, id=7012, stack(0x46f40000,0x47340000)]
+  0x45f86800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=9900, stack(0x46b00000,0x46f00000)]
+  0x45f46c00 JavaThread "AppMgr Thread" [_thread_in_native, id=9088, stack(0x465a0000,0x469a0000)]
+  0x047e2800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=2972, stack(0x45690000,0x45a90000)]
+  0x047df000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5696, stack(0x45600000,0x45650000)]
+  0x047da800 JavaThread "Attach Listener" daemon [_thread_blocked, id=2332, stack(0x451c0000,0x455c0000)]
+  0x047d8c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6588, stack(0x44d80000,0x45180000)]
+  0x047cc000 JavaThread "Finalizer" daemon [_thread_blocked, id=11016, stack(0x44940000,0x44d40000)]
+  0x047cac00 JavaThread "Reference Handler" daemon [_thread_blocked, id=7856, stack(0x44500000,0x44900000)]
+
+Other Threads:
+  0x047c7000 VMThread [stack: 0x44470000,0x444c0000] [id=4400]
+  0x04800800 WatcherThread [stack: 0x45ad0000,0x45b20000] [id=3868]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 47104K, used 36319K [0x068d0000, 0x09be0000, 0x19b70000)
+  eden space 41920K,  75% used [0x068d0000, 0x087af6c0, 0x091c0000)
+  from space 5184K,  90% used [0x096d0000, 0x09b68598, 0x09be0000)
+  to   space 5184K,   0% used [0x091c0000, 0x091c0000, 0x096d0000)
+ tenured generation   total 104408K, used 100425K [0x19b70000, 0x20166000, 0x400d0000)
+   the space 104408K,  96% used [0x19b70000, 0x1fd82710, 0x1fd82800, 0x20166000)
+ compacting perm gen  total 31488K, used 31309K [0x400d0000, 0x41f90000, 0x440d0000)
+   the space 31488K,  99% used [0x400d0000, 0x41f63798, 0x41f63800, 0x41f90000)
+No shared spaces configured.
+
+Code Cache  [0x04850000, 0x04f88000, 0x06850000)
+ total_blobs=4604 nmethods=4200 adapters=335 free_code_cache=25990336 largest_free_block=384
+
+Dynamic libraries:
+0x00400000 - 0x00476000 	D:\Study\Maple\jre\bin\maple.exe
+0x77d60000 - 0x77eed000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x76120000 - 0x761f0000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x74e90000 - 0x75067000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x746d0000 - 0x7476a000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x77710000 - 0x77788000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x74d40000 - 0x74dfd000 	C:\WINDOWS\System32\msvcrt.dll
+0x77d10000 - 0x77d53000 	C:\WINDOWS\System32\sechost.dll
+0x75690000 - 0x7574e000 	C:\WINDOWS\System32\RPCRT4.dll
+0x74780000 - 0x747a0000 	C:\WINDOWS\System32\SspiCli.dll
+0x74770000 - 0x7477a000 	C:\WINDOWS\System32\CRYPTBASE.dll
+0x75500000 - 0x75557000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x7c340000 - 0x7c396000 	D:\Study\Maple\jre\bin\msvcr71.dll
+0x6d7f0000 - 0x6daa0000 	D:\Study\Maple\jre\bin\client\jvm.dll
+0x777b0000 - 0x77925000 	C:\WINDOWS\System32\USER32.dll
+0x76320000 - 0x76336000 	C:\WINDOWS\System32\win32u.dll
+0x77ce0000 - 0x77d02000 	C:\WINDOWS\System32\GDI32.dll
+0x75fc0000 - 0x7611e000 	C:\WINDOWS\System32\gdi32full.dll
+0x75480000 - 0x754fc000 	C:\WINDOWS\System32\msvcp_win.dll
+0x76200000 - 0x76317000 	C:\WINDOWS\System32\ucrtbase.dll
+0x74250000 - 0x74274000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x74210000 - 0x74233000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x77930000 - 0x77968000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x75560000 - 0x75585000 	C:\WINDOWS\System32\IMM32.DLL
+0x75750000 - 0x75996000 	C:\WINDOWS\System32\combase.dll
+0x6d7a0000 - 0x6d7ac000 	D:\Study\Maple\jre\bin\verify.dll
+0x6d320000 - 0x6d33f000 	D:\Study\Maple\jre\bin\java.dll
+0x6d7e0000 - 0x6d7ef000 	D:\Study\Maple\jre\bin\zip.dll
+0x6d600000 - 0x6d613000 	D:\Study\Maple\jre\bin\net.dll
+0x74840000 - 0x748a6000 	C:\WINDOWS\System32\WS2_32.dll
+0x735a0000 - 0x735f5000 	C:\WINDOWS\system32\mswsock.dll
+0x734a0000 - 0x73534000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x77970000 - 0x77977000 	C:\WINDOWS\System32\NSI.dll
+0x741e0000 - 0x74210000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x73390000 - 0x73398000 	C:\Windows\System32\rasadhlp.dll
+0x73430000 - 0x7347e000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x73bf0000 - 0x73c09000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x6d000000 - 0x6d14c000 	D:\Study\Maple\jre\bin\awt.dll
+0x750f0000 - 0x751e7000 	C:\WINDOWS\System32\ole32.dll
+0x72f90000 - 0x72ffc000 	C:\WINDOWS\SYSTEM32\WINSPOOL.DRV
+0x71940000 - 0x71b51000 	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.16299.98_none_144040db3691ec4e\COMCTL32.dll
+0x72f60000 - 0x72f83000 	C:\WINDOWS\system32\DWMAPI.DLL
+0x72720000 - 0x72799000 	C:\WINDOWS\system32\uxtheme.dll
+0x6d230000 - 0x6d27f000 	D:\Study\Maple\jre\bin\fontmanager.dll
+0x751f0000 - 0x75334000 	C:\WINDOWS\System32\MSCTF.dll
+0x747a0000 - 0x74833000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x75070000 - 0x7507e000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x73c10000 - 0x73c23000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x71b60000 - 0x71b8f000 	C:\WINDOWS\system32\rsaenh.dll
+0x74280000 - 0x742a2000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x77790000 - 0x777a4000 	C:\WINDOWS\System32\profapi.dll
+0x73580000 - 0x73591000 	C:\WINDOWS\system32\napinsp.dll
+0x73560000 - 0x73576000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x73540000 - 0x73553000 	C:\WINDOWS\system32\NLAapi.dll
+0x73490000 - 0x7349c000 	C:\WINDOWS\System32\winrnr.dll
+0x73480000 - 0x73490000 	C:\WINDOWS\System32\wshbth.dll
+0x6d440000 - 0x6d465000 	D:\Study\Maple\jre\bin\jpeg.dll
+0x76340000 - 0x77673000 	C:\WINDOWS\System32\shell32.dll
+0x77680000 - 0x77708000 	C:\WINDOWS\System32\shcore.dll
+0x759f0000 - 0x75fb6000 	C:\WINDOWS\System32\windows.storage.dll
+0x75430000 - 0x75475000 	C:\WINDOWS\System32\shlwapi.dll
+0x77980000 - 0x779c5000 	C:\WINDOWS\System32\powrprof.dll
+0x6d620000 - 0x6d629000 	D:\Study\Maple\jre\bin\nio.dll
+0x73cb0000 - 0x73cc6000 	C:\WINDOWS\SYSTEM32\CLDAPI.dll
+0x73c60000 - 0x73c68000 	C:\WINDOWS\SYSTEM32\FLTLIB.DLL
+0x73c70000 - 0x73cab000 	C:\WINDOWS\SYSTEM32\AEPIC.dll
+0x73c30000 - 0x73c58000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x74e00000 - 0x74e82000 	C:\WINDOWS\System32\clbcatq.dll
+0x73fb0000 - 0x7412a000 	C:\WINDOWS\system32\propsys.dll
+0x652f0000 - 0x65414000 	C:\WINDOWS\system32\NetworkExplorer.dll
+0x73cd0000 - 0x73fa7000 	C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+0x64dd0000 - 0x64f3e000 	C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+0x71df0000 - 0x71e3e000 	C:\Windows\System32\thumbcache.dll
+0x651b0000 - 0x65219000 	C:\WINDOWS\SYSTEM32\policymanager.dll
+0x64fd0000 - 0x65037000 	C:\WINDOWS\SYSTEM32\msvcp110_win.dll
+0x6d1a0000 - 0x6d1c3000 	D:\Study\Maple\jre\bin\dcpr.dll
+0x49c20000 - 0x49c92000 	C:\Users\Yao\AppData\Local\Temp\jna\jna7578584138642517025.dll
+0x761f0000 - 0x761f6000 	C:\WINDOWS\System32\PSAPI.DLL
+0x49ca0000 - 0x49d4a000 	D:\Study\Maple\bin.X86_64_WINDOWS\gstreamer\bin\libgstreamer-0.10.dll
+0x65c40000 - 0x65c4d000 	D:\Study\Maple\bin.X86_64_WINDOWS\gstreamer\bin\libgthread-2.0-0.dll
+0x6dd00000 - 0x6dd0d000 	D:\Study\Maple\bin.X86_64_WINDOWS\gstreamer\bin\libgmodule-2.0-0.dll
+0x63a40000 - 0x63a8a000 	D:\Study\Maple\bin.X86_64_WINDOWS\gstreamer\bin\libgobject-2.0-0.dll
+0x685c0000 - 0x686c6000 	D:\Study\Maple\bin.X86_64_WINDOWS\libglib-2.0-0.dll
+0x6a300000 - 0x6a323000 	D:\Study\Maple\bin.X86_64_WINDOWS\intl.dll
+0x49d50000 - 0x49e45000 	D:\Study\Maple\bin.X86_64_WINDOWS\libxml2-2.dll
+0x71d50000 - 0x71d58000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x62780000 - 0x6278a000 	D:\Study\Maple\bin.X86_64_WINDOWS\iconv.dll
+0x62e80000 - 0x62e9f000 	D:\Study\Maple\bin.X86_64_WINDOWS\zlib1.dll
+0x66fd0000 - 0x67018000 	C:\WINDOWS\system32\dataexchange.dll
+0x66ed0000 - 0x66fce000 	C:\WINDOWS\system32\dcomp.dll
+0x67020000 - 0x6725e000 	C:\WINDOWS\system32\d3d11.dll
+0x72960000 - 0x729f3000 	C:\WINDOWS\system32\dxgi.dll
+0x66d90000 - 0x66ec4000 	C:\WINDOWS\system32\twinapi.appcore.dll
+0x66d70000 - 0x66d8a000 	C:\WINDOWS\system32\RMCLIENT.dll
+0x64d50000 - 0x64dc7000 	C:\WINDOWS\System32\TextInputFramework.dll
+0x64a80000 - 0x64b0c000 	C:\WINDOWS\System32\CoreMessaging.dll
+0x64b10000 - 0x64d44000 	C:\WINDOWS\System32\CoreUIComponents.dll
+0x71630000 - 0x716fb000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x024b0000 - 0x024fd000 	D:\Study\Maple\bin.X86_64_WINDOWS\jogl.dll
+0x649a0000 - 0x64a7f000 	C:\WINDOWS\SYSTEM32\OPENGL32.dll
+0x71dc0000 - 0x71de5000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x63fa0000 - 0x64805000 	C:\WINDOWS\SYSTEM32\ig75icd32.dll
+0x742c0000 - 0x742cf000 	C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+0x4e1d0000 - 0x4ea9b000 	C:\WINDOWS\SYSTEM32\igdusc32.dll
+0x71d90000 - 0x71db2000 	D:\Study\Maple\bin.X86_64_WINDOWS\gl2psjni.dll
+0x73060000 - 0x7311f000 	C:\WINDOWS\SYSTEM32\MSVCR100.dll
+0x54450000 - 0x5483e000 	C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler\libmmd.dll
+
+VM Arguments:
+jvm_args: -Xmx919m -Xss4m -Ddefault.browser="C:\Program Files\Internet Explorer\IEXPLORE.EXE" %1 -Dmaple.bin.path=D:\Study\Maple\bin.X86_64_WINDOWS 
+java_command: com.maplesoft.application.Launcher -command Open C:\Users\Yao\Dropbox\XueYang Yao Thesis\Work\Maple+Matlab\Maple\Square_Mex.mw
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=D:\Study\Maple\bin.X86_64_WINDOWS;D:\Study\Maple\bin.X86_64_WINDOWS\gstreamer\bin;D:\Study\Maple\jre\bin;D:\Study\Maple\jre\bin\classic;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Study\Matlab\runtime\win64;D:\Study\Matlab\bin;D:\Study\Matlab\polyspace\bin;C:\Users\Yao\AppData\Local\Microsoft\WindowsApps;
+USERNAME=Yao
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 12500104k(6758792k free), swap 14990472k(9160144k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.13-b02) for windows-x86 JRE (1.6.0_38-b05), built on Nov 14 2012 01:54:26 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Wed Dec 13 14:19:14 2017
+elapsed time: 3807 seconds
+
