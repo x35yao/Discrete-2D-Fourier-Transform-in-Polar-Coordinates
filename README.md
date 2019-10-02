@@ -8,7 +8,7 @@ accuracy and precision. Guidelines of choosing sample size are developed.
 Furthermore, to be as useful as its Cartesian counterpart, improvements are made to
 reduce the computing time.
 ## Preprint
-https://www.researchgate.net/publication/334515956_Discrete_Two_Dimensional_Fourier_Transform_in_Polar_Coordinates_Part_II_Numerical_Computation_and_Approximation_of_the_Continuous_Transform
+https://www.preprints.org/manuscript/201907.0189/v1
 ## Conference paper
 ### ASME
 https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings/IDETC-CIE2018/51722/Quebec%20City,%20Quebec,%20Canada/273433
