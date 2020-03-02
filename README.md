@@ -7,8 +7,8 @@ polar coordinates is proposed and tested by numerical simulations with respect t
 accuracy and precision. Guidelines of choosing sample size are developed.
 Furthermore, to be as useful as its Cartesian counterpart, improvements are made to
 reduce the computing time.
-## Preprint
-https://www.preprints.org/manuscript/201907.0189/v1
+## Journal paper
+https://peerj.com/articles/cs-257/
 ## Conference paper
 ### ASME
 https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings/IDETC-CIE2018/51722/Quebec%20City,%20Quebec,%20Canada/273433
